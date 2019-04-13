@@ -1,24 +1,28 @@
-public class Player extends Person
+public class Person
 {
-    private String role;
-    private String number;
+    private String name;
+    private String surname;
+    private String address;
+    private String fiscalCode;
 
-    //costruttore(parametri di ingresso di player + parametri di ingresso di person perchè sono ereditati)
-    public Player(String role, String number,String name, String surname, String address, String fiscalCode)
+
+   //costruttore (variabili  di ingresso)
+    public Person(String name, String surname, String address, String fiscalCode)
     {
-        super(name,surname,address,fiscalCode); //richiamo il costruttore della classe padre person)
-        this.role = role;
-        this.number = number;
+        this.name = name;
+        this.surname = surname;
+        this.address = address;
+        this.fiscalCode = fiscalCode;
     }
 
-    public String getRole()
-    {
-        return role;
-    }
+    // getters
+    public String getName() {return name;}
 
-    @Override
-    public String toString()
-    {
-        return "\nName: "+getName()+"\nSurname: "+getSurname()+"\nAddress: "+getAddress()+"\nFiscal Code: "+getFiscalCode()+"\nRole: "+role+"\nNumber of shirt: "+number;
-    }
+    public String getSurname() {return surname;}
+
+    public String getAddress() {return address;}
+
+    public String getFiscalCode() { return fiscalCode;}
 }
+
+
